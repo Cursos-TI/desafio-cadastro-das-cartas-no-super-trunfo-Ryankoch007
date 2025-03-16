@@ -10,7 +10,7 @@ int main () {
     float pib;
     float densidade;
     float pib_per_capita;
-   pib_per_capita = (float) pib / populacao;
+  
     // inserir os Dados da primeira Carta
     printf("\n");
     printf("BEM VINDO AO JOGO DO SUPERTRUNFO\n");
