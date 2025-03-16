@@ -8,8 +8,9 @@ int main () {
     int pontos;
     float area;
     float pib;
-    
-
+    float densidade;
+    float pib_per_capita;
+   pib_per_capita = (float) pib / populacao;
     // inserir os Dados da primeira Carta
     printf("\n");
     printf("BEM VINDO AO JOGO DO SUPERTRUNFO\n");
@@ -39,6 +40,9 @@ printf("Digite os numeros de pontos turisticos :\n");
 scanf("%d" , &pontos);
 printf("\n");
 
+// Calcular densidade
+densidade = (float) populacao / area;
+pib_per_capita = (float) pib / populacao;
 //Exibir os dados da primeira carta
 
 printf("OS DADOS CARTA NUMERO 1:");
@@ -48,9 +52,13 @@ printf("Codigo : %s\n" , codigo);
 printf("Cidade : %s\n" , cidade);
 printf("Populacao : %d\n", populacao);
 printf("Area : %f\n" , area);
-printf("Pib per capita : %f\n", pib);
+printf("Pib : %f\n", pib);
 printf("Pontos turisticos : %d\n" , pontos);
+printf("Densidade Populacional : %.2f Km2\n" , densidade);
+printf("Pib per capita : %.2f" , pib_per_capita);
 printf("\n");
+
+
 //INSERIR DADOS DA SEGUNDA CARTA:
 printf("Digite os dados da Carta n 2\n");
 
@@ -76,6 +84,10 @@ scanf("%f" , &pib);
 printf("Digite os numeros de pontos turisticos :\n");
 scanf(" %d" , &pontos);
 printf("\n");
+
+densidade = (float) populacao / area;
+pib_per_capita = (float) pib / populacao;
+
 //Exibir os dados da segunda carta:
 printf("\n");
 printf("\n");
@@ -86,8 +98,10 @@ printf("Codigo : %s\n" , codigo);
 printf("Cidade : %s\n" , cidade);
 printf("Populacao : %d\n", populacao);
 printf("Area : %f\n" , area);
-printf("Pib per capita : %f\n", pib);
+printf("Pib : %f\n", pib);
 printf("Pontos turisticos : %d\n" , pontos);
+printf("Densidade Populacional : %.2f Km2\n" , densidade);
+printf("Pib per capita : %.2f" , pib_per_capita);
 printf("\n");
 
 // Mensagem final
