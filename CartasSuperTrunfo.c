@@ -18,7 +18,7 @@ int main () {
     
 printf("Digite os dados da Carta n 1\n");
 
-printf("Digite o estado de (A-H) :\n");
+printf("Digite o estado de (A-H) :\n"); // estou fazendo uma dinamica diferente com o nome inteiro do estado que so pode o primeiro nome
 scanf("  %s" , &estado);
 
 printf("Codigo (ex: A01):\n");
