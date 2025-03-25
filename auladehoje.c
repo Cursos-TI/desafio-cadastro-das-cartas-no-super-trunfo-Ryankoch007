@@ -2,7 +2,7 @@
 
 int main () {
 // variaveis para armazenar dados de todas as cartas
-    char estado1,estado2;
+    char estado1[3],estado2[3];
     char cidade1[50], cidade2[50];
     char codigo1[4], codigo2[4];
     unsigned long int populacao1 , populacao2;
@@ -22,7 +22,7 @@ int main () {
 printf("Digite os dados da Carta n 1\n");
 
 printf("Digite o estado de (A-H) :\n");
-scanf("  %c" , &estado1);
+scanf("  %s" , &estado1);
 
 printf("Codigo (ex: A01):\n");
 scanf("%s" , &codigo1);
@@ -56,7 +56,7 @@ pib_per_capita1 = (float) pib1 / populacao1;
 
 printf("OS DADOS CARTA NUMERO 1:");
 printf("\n");
-printf("Estado : %c \n" , estado1);
+printf("Estado : %s \n" , estado1);
 printf("Codigo : %s\n" , codigo1);
 printf("Cidade : %s\n" , cidade1);
 printf("Populacao : %lu\n", populacao1);
@@ -73,7 +73,7 @@ printf("*******************************************\n");
 printf("Digite os dados da Carta n 2\n");
 
 printf("Digite o estado de (A-H) :\n");
-scanf("  %c" , &estado2);
+scanf("  %s" , &estado2);
 
 printf("Codigo (ex: A01):\n");
 scanf("%s" , &codigo2);
@@ -108,7 +108,7 @@ printf("\n");
 printf("\n");
 printf("OS DADOS CARTA NUMERO 2:");
 printf("\n");
-printf("Estado : %c\n" , estado2);
+printf("Estado : %s\n" , estado2);
 printf("Codigo : %s\n" , codigo2);
 printf("Cidade : %s\n" , cidade2);
 printf("Populacao : %lu\n", populacao2);
@@ -122,30 +122,30 @@ printf("************************************\n");
     // Menu interativo
     int opcao;
     do {
-        printf("\nEscolha o atributo para comparação:\n");
-        printf("1. População\n");
-        printf("2. Área\n");
+        printf("\nEscolha o atributo para comparacao:\n");
+        printf("1. Populacao\n");
+        printf("2. Area\n");
         printf("3. PIB\n");
-        printf("4. Pontos Turísticos\n");
+        printf("4. Pontos Turisticos\n");
         printf("5. Densidade Populacional\n");
         printf("6. PIB per Capita\n");
         printf("7. Super Poder\n");
-        printf("0. Sair\n");
-        printf("Digite a opção: ");
+        printf("'0'. Pressione para Sair\n");
+        printf("Digite a opcao: ");
         scanf("%d", &opcao);
 
 switch (opcao)
 {
 case 1: //COMPARAÇÃO DE POPULAÇÃO
     if (populacao1 > populacao2){    
-        printf("Carta 1 vence em População:  %lu vs %lu\n", populacao1, populacao2);
+        printf("Carta 1 vence em Populacao:  %lu vs %lu\n", populacao1, populacao2);
           vitoriasCarta1++;    
     } else if (populacao1 < populacao2)
     {
-         printf("Carta 2 vence em População:  %lu vs %lu\n", populacao1, populacao2);
+         printf("Carta 2 vence em Populacao:  %lu vs %lu\n", populacao1, populacao2);
         vitoriasCarta2++;    
     } else {
-         printf("Empate em População: %lu vs %lu\n", populacao1, populacao2);
+         printf("Empate em Populacao: %lu vs %lu\n", populacao1, populacao2);
     }
     break;
     case 2: //COMPARAÇÃO DE ÁREA
@@ -180,10 +180,10 @@ case 4: //COMPARAÇÃO DE PONTOS TURISTICOS
           vitoriasCarta1++;    
     } else if (pontos1 < pontos2)
     {
-         printf("Carta 2 vence em area: %d vs %d\n", pontos1, pontos2);
+         printf("Carta 2 vence em Pontos turisticos: %d vs %d\n", pontos1, pontos2);
         vitoriasCarta2++;    
     } else {
-         printf("Empate em area: %d vs %d\n", pontos1, pontos2);
+         printf("Empate em Pontos turisticos: %d vs %d\n", pontos1, pontos2);
     }
 break;
 
@@ -228,7 +228,7 @@ printf("Saindo... Fim de jogo!\n");
 break;
 
 default:
-printf("Opção inválida! Tente novamente.\n");
+printf("Opcao invalida! Tente novamente.\n");
 break;
 }
 }
@@ -239,11 +239,11 @@ while (opcao != 0);
     // Exibir vencedor final
     printf("\nResultado Final:\n");
     if (vitoriasCarta1 > vitoriasCarta2) {
-        printf("Carta 1 é a vencedora com %d vitórias!\n", vitoriasCarta1);
+        printf("Carta 1 e a vencedora com %d vitorias!\n", vitoriasCarta1);
     } else if (vitoriasCarta1 < vitoriasCarta2) {
-        printf("Carta 2 é a vencedora com %d vitórias!\n", vitoriasCarta2);
+        printf("Carta 2 e a vencedora com %d vitorias!\n", vitoriasCarta2);
     } else {
-        printf("Empate geral! Ambas as cartas tiveram o mesmo número de vitórias.\n");
+        printf("Empate geral! Ambas as cartas tiveram o mesmo número de vitorias.\n");
     }
 
 
